@@ -195,7 +195,7 @@ class empleadosController extends Controller
     
         public function buscarid($idEmp)
     {
-    $user = empleados::where("emdempresa","=",$idEmp)->get();
+        $user = empleados::where("emdempresa","=",$idEmp)->get();
         return  $user;
     }
     
@@ -250,116 +250,113 @@ class empleadosController extends Controller
 
             if($formato == $a){
                 //total_intralaboral
-            if($total_intralaboral == 0 or $total_intralaboral <= 19.7){
-                $conteo0 = $conteo0 +1;
-            }
-            elseif($total_intralaboral == 19.8 or $total_intralaboral <= 25.8){
-                $conteo1 = $conteo1 +1;
-            }
-            elseif($total_intralaboral == 25.9 or $total_intralaboral <= 31.5){
-                $conteo2 = $conteo2 +1;
-            }
-            elseif($total_intralaboral == 31.6 or $total_intralaboral <= 38.0){
-                $conteo3 = $conteo3 +1;
-            }
-            elseif($total_intralaboral == 38.1 or $total_intralaboral <= 100){
-                $conteo4 = $conteo4 +1;
-            }
+                if($total_intralaboral == 0 or $total_intralaboral <= 19.7){
+                    $conteo0 = $conteo0 +1;
+                }
+                elseif($total_intralaboral == 19.8 or $total_intralaboral <= 25.8){
+                    $conteo1 = $conteo1 +1;
+                }
+                elseif($total_intralaboral == 25.9 or $total_intralaboral <= 31.5){
+                    $conteo2 = $conteo2 +1;
+                }
+                elseif($total_intralaboral == 31.6 or $total_intralaboral <= 38.0){
+                    $conteo3 = $conteo3 +1;
+                }
+                elseif($total_intralaboral == 38.1 or $total_intralaboral <= 100){
+                    $conteo4 = $conteo4 +1;
+                }
+                
+                
+             //total_extralaboral
+                if($total_extralaboral == 0 or $total_extralaboral <= 18.8){
+                    $conteo00 = $conteo00 +1;
+                }
+                elseif($total_extralaboral == 18.9 or $total_extralaboral <= 24.4){
+                    $conteo10 = $conteo10 +1;
+                }
+                elseif($total_extralaboral == 24.5 or $total_extralaboral <= 29.5){
+                    $conteo20 = $conteo20 +1;
+                }
+                elseif($total_extralaboral == 29.6 or $total_extralaboral <= 35.4){
+                    $conteo30 = $conteo30 +1;
+                }
+                elseif($total_extralaboral == 35.5 or $total_extralaboral <= 100){
+                    $conteo40 = $conteo40 +1;
+                }
+                
+                
+                //total_general
+                if($total_general == 0 or $total_general <= 18.8){
+                    $conteo01 = $conteo01 +1;
+                }
+                elseif($total_general == 18.9 or $total_general <= 24.4){
+                    $conteo11 = $conteo11 +1;
+                }
+                elseif($total_general == 24.5 or $total_general <= 29.5){
+                    $conteo21 = $conteo21 +1;
+                }
+                elseif($total_general == 29.6 or $total_general <= 35.4){
+                    $conteo31 = $conteo31 +1;
+                }
+                elseif($total_general == 35.5 or $total_general <= 100){
+                    $conteo41 = $conteo41 +1;
+                }
             
-            
-         //total_extralaboral
-            if($total_extralaboral == 0 or $total_extralaboral <= 11.3){
-                $conteo00 = $conteo00 +1;
             }
-            elseif($total_extralaboral == 11.4 or $total_extralaboral <= 16.9){
-                $conteo10 = $conteo10 +1;
-            }
-            elseif($total_extralaboral == 17.0 or $total_extralaboral <= 22.6){
-                $conteo20 = $conteo20 +1;
-            }
-            elseif($total_extralaboral == 22.7 or $total_extralaboral <= 29.0){
-                $conteo30 = $conteo30 +1;
-            }
-            elseif($total_extralaboral == 29.1 or $total_extralaboral <= 100){
-                $conteo40 = $conteo40 +1;
-            }
-            
-            
-            //total_general
-            if($total_general == 0 or $total_general <= 18.8){
-                $conteo01 = $conteo01 +1;
-            }
-            elseif($total_general == 18.9 or $total_general <= 24.4){
-                $conteo11 = $conteo11 +1;
-            }
-            elseif($total_general == 24.5 or $total_general <= 29.5){
-                $conteo21 = $conteo21 +1;
-            }
-            elseif($total_general == 29.6 or $total_general <= 35.4){
-                $conteo31 = $conteo31 +1;
-            }
-            elseif($total_general == 35.5 or $total_general <= 100){
-                $conteo41 = $conteo41 +1;
-            }
-            
-            }
-			
-			
-			
 			
 			
             if($formato !== $a){
                 //total_intralaboral
-            if($total_intralaboral == 0 or $total_intralaboral <= 20.6){
-                $conteo0 = $conteo0 +1;
-            }
-            elseif($total_intralaboral == 20.7 or $total_intralaboral <= 26.0){
-                $conteo1 = $conteo1 +1;
-            }
-            elseif($total_intralaboral == 26.1 or $total_intralaboral <= 31.2){
-                $conteo2 = $conteo2 +1;
-            }
-            elseif($total_intralaboral == 31.3 or $total_intralaboral <= 38.7){
-                $conteo3 = $conteo3 +1;
-            }
-            elseif($total_intralaboral == 38.8 or $total_intralaboral <= 100){
-                $conteo4 = $conteo4 +1;
-            }
-            
-            
-         //total_extralaboral
-            if($total_extralaboral == 0 or $total_extralaboral <= 12.9){
-                $conteo00 = $conteo00 +1;
-            }
-            elseif($total_extralaboral == 13.0 or $total_extralaboral <= 17.7){
-                $conteo10 = $conteo10 +1;
-            }
-            elseif($total_extralaboral == 17.8 or $total_extralaboral <= 24.2){
-                $conteo20 = $conteo20 +1;
-            }
-            elseif($total_extralaboral == 24.3 or $total_extralaboral <= 32.3){
-                $conteo30 = $conteo30 +1;
-            }
-            elseif($total_extralaboral == 32.4 or $total_extralaboral <= 100){
-                $conteo40 = $conteo40 +1;
-            }
-                        
-            //total_general
-            if($total_general == 0 or $total_general <= 19.9){
-                $conteo01 = $conteo01 +1;
-            }
-            elseif($total_general == 20.0 or $total_general <= 24.8){
-                $conteo11 = $conteo11 +1;
-            }
-            elseif($total_general == 24.9 or $total_general <= 29.5){
-                $conteo21 = $conteo21 +1;
-            }
-            elseif($total_general == 29.6 or $total_general <= 35.4){
-                $conteo31 = $conteo31 +1;
-            }
-            elseif($total_general == 35.5 or $total_general <= 100){
-                $conteo41 = $conteo41 +1;
-            }
+                if($total_intralaboral == 0 or $total_intralaboral <= 20.6){
+                    $conteo0 = $conteo0 +1;
+                }
+                elseif($total_intralaboral == 20.7 or $total_intralaboral <= 26.0){
+                    $conteo1 = $conteo1 +1;
+                }
+                elseif($total_intralaboral == 26.1 or $total_intralaboral <= 31.2){
+                    $conteo2 = $conteo2 +1;
+                }
+                elseif($total_intralaboral == 31.3 or $total_intralaboral <= 38.7){
+                    $conteo3 = $conteo3 +1;
+                }
+                elseif($total_intralaboral == 38.8 or $total_intralaboral <= 100){
+                    $conteo4 = $conteo4 +1;
+                }
+                
+                
+             //total_extralaboral
+                if($total_extralaboral == 0 or $total_extralaboral <= 19.9){
+                    $conteo00 = $conteo00 +1;
+                }
+                elseif($total_extralaboral == 20.0 or $total_extralaboral <= 24.8){
+                    $conteo10 = $conteo10 +1;
+                }
+                elseif($total_extralaboral == 24.9 or $total_extralaboral <= 29.5){
+                    $conteo20 = $conteo20 +1;
+                }
+                elseif($total_extralaboral == 29.6 or $total_extralaboral <= 35.4){
+                    $conteo30 = $conteo30 +1;
+                }
+                elseif($total_extralaboral == 35.5 or $total_extralaboral <= 100){
+                    $conteo40 = $conteo40 +1;
+                }
+                            
+                //total_general
+                if($total_general == 0 or $total_general <= 19.9){
+                    $conteo01 = $conteo01 +1;
+                }
+                elseif($total_general == 20.0 or $total_general <= 24.8){
+                    $conteo11 = $conteo11 +1;
+                }
+                elseif($total_general == 24.9 or $total_general <= 29.5){
+                    $conteo21 = $conteo21 +1;
+                }
+                elseif($total_general == 29.6 or $total_general <= 35.4){
+                    $conteo31 = $conteo31 +1;
+                }
+                elseif($total_general == 35.5 or $total_general <= 100){
+                    $conteo41 = $conteo41 +1;
+                }
             }
             
         }
@@ -478,19 +475,19 @@ class empleadosController extends Controller
             
             
          //total_extralaboral
-            if($total_extralaboral == 0 or $total_extralaboral <= 11.3){
+            if($total_extralaboral == 0 or $total_extralaboral <= 18.8){
                 $conteo00 = $conteo00 +1;
             }
-            elseif($total_extralaboral == 11.4 or $total_extralaboral <= 16.9){
+            elseif($total_extralaboral == 18.9 or $total_extralaboral <= 24.4){
                 $conteo10 = $conteo10 +1;
             }
-            elseif($total_extralaboral == 17.0 or $total_extralaboral <= 22.6){
+            elseif($total_extralaboral == 24.5 or $total_extralaboral <= 29.5){
                 $conteo20 = $conteo20 +1;
             }
-            elseif($total_extralaboral == 22.7 or $total_extralaboral <= 29.0){
+            elseif($total_extralaboral == 29.6 or $total_extralaboral <= 35.4){
                 $conteo30 = $conteo30 +1;
             }
-            elseif($total_extralaboral == 29.1 or $total_extralaboral <= 100){
+            elseif($total_extralaboral == 35.5 or $total_extralaboral <= 100){
                 $conteo40 = $conteo40 +1;
             }
             
@@ -538,21 +535,22 @@ class empleadosController extends Controller
             
             
          //total_extralaboral
-            if($total_extralaboral == 0 or $total_extralaboral <= 12.9){
-                $conteo00 = $conteo00 +1;
+            if($total_general == 0 or $total_general <= 19.9){
+                $conteo01 = $conteo01 +1;
             }
-            elseif($total_extralaboral == 13.0 or $total_extralaboral <= 17.7){
-                $conteo10 = $conteo10 +1;
+            elseif($total_general == 20.0 or $total_general <= 24.8){
+                $conteo11 = $conteo11 +1;
             }
-            elseif($total_extralaboral == 17.8 or $total_extralaboral <= 24.2){
-                $conteo20 = $conteo20 +1;
+            elseif($total_general == 24.9 or $total_general <= 29.5){
+                $conteo21 = $conteo21 +1;
             }
-            elseif($total_extralaboral == 24.3 or $total_extralaboral <= 32.3){
-                $conteo30 = $conteo30 +1;
+            elseif($total_general == 29.6 or $total_general <= 35.4){
+                $conteo31 = $conteo31 +1;
             }
-            elseif($total_extralaboral == 32.4 or $total_extralaboral <= 100){
-                $conteo40 = $conteo40 +1;
+            elseif($total_general == 35.5 or $total_general <= 100){
+                $conteo41 = $conteo41 +1;
             }
+            
                         
             //total_general
             if($total_general == 0 or $total_general <= 19.9){
